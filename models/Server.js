@@ -1,9 +1,11 @@
 const express = require("express");
+const dotenv = require("dotenv");
 const connection = require("../db/connection");
 const router = require("../routes/index.routes");
 
 class Server {
   constructor() {
+    dotenv.config();
     this.app = express();
     this.port = process.env.PORT || 3001;
     this.config();
@@ -31,9 +33,7 @@ class Server {
   }
 
   start() {
-    this.app.listen(this.port, () => {
-      console.log("Server started on port", this.port);
-    });
+    this.app.listen(this.port);
   }
 }
 
