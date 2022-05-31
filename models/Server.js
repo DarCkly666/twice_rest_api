@@ -14,8 +14,7 @@ class Server {
 
   async connectionDB() {
     try {
-      await connection.authenticate();
-      await connection.sync({ alter: true });
+      await connection();
       console.log("Connection has been established successfully.");
     } catch (err) {
       console.log("Unable to connect to the database:", err);
@@ -23,7 +22,7 @@ class Server {
   }
 
   config() {
-    this.app.set("port", process.env.PORT || 3000);
+    this.app.set("port", process.env.PORT || 3001);
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.static("public"));

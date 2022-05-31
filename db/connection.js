@@ -1,18 +1,11 @@
-const { Sequelize } = require("sequelize");
-const dotenv = require("dotenv");
-dotenv.config();
+const mongoose = require("mongoose");
 
-const database = process.env.DATABASE;
-const username = process.env.DB_USERNAME;
-const password = process.env.DB_PASSWORD;
-const host = process.env.DB_HOST;
-const port = process.env.DB_PORT;
-const dialect = process.env.DB_DIALECT;
-
-const connection = new Sequelize(database, username, password, {
-  host: host,
-  port: port,
-  dialect: dialect,
-});
+function connection() {
+  const mongooseOptions = { useNewUrlParser: true, useUnifiedTopology: true };
+  return mongoose.connect(
+    `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.tq2s6.mongodb.net/${process.env.DATABASE}?retryWrites=true&w=majority`,
+    mongooseOptions
+  );
+}
 
 module.exports = connection;

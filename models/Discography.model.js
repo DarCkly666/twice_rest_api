@@ -1,36 +1,14 @@
-const connection = require("../db/connection");
-const { DataTypes } = require("sequelize");
+const mongoose = require("mongoose");
+const { Schema } = require("mongoose");
 
-const Discography = connection.define(
-  "discography",
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true,
-    },
-    title: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    year: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
-    label: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    type: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    spotify_url: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-  },
-  { timestamps: false, freezeTableName: true }
-);
+const discographySchema = new Schema({
+  title: String,
+  year: Number,
+  label: String,
+  type: String,
+  spotify_url: String,
+});
+
+const Discography = mongoose.model("Discography", discographySchema);
 
 module.exports = Discography;

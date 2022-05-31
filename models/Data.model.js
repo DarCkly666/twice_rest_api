@@ -1,72 +1,23 @@
-const connection = require("../db/connection");
-const { DataTypes } = require("sequelize");
+const mongoose = require("mongoose");
+const { Schema } = require("mongoose");
 
-const Data = connection.define(
-  "data",
-  {
-    id: {
-      type: DataTypes.INTEGER,
-      autoIncrement: true,
-      primaryKey: true,
-    },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    name_hangul: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    name_katakana: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    debut: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: false,
-    },
-    fandom: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    colors: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: false,
-    },
-    logo: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    url: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    url_japan: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    origin: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    genres: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: false,
-    },
-    labels: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      allowNull: false,
-    },
-    status: {
-      type: DataTypes.STRING,
-      defaultValue: "active",
-    },
-    description: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-  },
-  { timestamps: false, freezeTableName: true }
-);
+const dataSchema = new Schema({
+  name: String,
+  name_hangul: String,
+  name_katakana: String,
+  debut: [{ type: String, default: "" }],
+  fandom: String,
+  colors: [{ type: String, default: "" }],
+  logo: String,
+  url: String,
+  url_japan: String,
+  origin: String,
+  genres: [{ type: String, default: "" }],
+  labels: [{ type: String, default: "" }],
+  status: String,
+  description: String,
+});
+
+const Data = mongoose.model("Data", dataSchema);
 
 module.exports = Data;
