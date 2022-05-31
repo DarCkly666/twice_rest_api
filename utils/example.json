@@ -1,0 +1,44 @@
+{
+  "data": {
+    "name": "Twice",
+    "name_hangul": "트와이스",
+    "name_katakana": "トゥワイス",
+    "debut": ["October 20, 2015 (South Korea)", "June 28, 2017 (Japan)"],
+    "fandom": "ONCE",
+    "colors": ["Apricot", "Neon Magenta"],
+    "logo": "twice.png",
+    "url": "https://twice.jype.com/",
+    "url_japan": "https://twicejapan.com/",
+    "origin": "Seoul, South Korea",
+    "genres": ["K-pop", "J-pop", "bubblegum pop", "dance-pop", "EDM"],
+    "labels": ["JYP", "Warner Japan", "Republic Records"],
+    "status": "Active",
+    "description": "Twice (Korean: 트와이스; RR: Teuwaiseu; Japanese: トゥワイス, Hepburn: To~uwaisu; commonly stylized in all caps as TWICE) is a South Korean girl group formed by JYP Entertainment. The group is composed of nine members: Nayeon, Jeongyeon, Momo, Sana, Jihyo, Mina, Dahyun, Chaeyoung, and Tzuyu. Twice was formed under the television program Sixteen (2015) and debuted on October 20, 2015, with the extended play (EP) The Story Begins.",
+    "social-media": {
+      "Korea": {
+        "Facebook": "https://www.facebook.com/JYPETWICE",
+        "Instagram": "https://www.instagram.com/twicetagram/",
+        "Twitter": "https://twitter.com/JYPEtwice",
+        "Fans": "https://fans.jype.com/TWICE",
+        "TikTok": "https://www.tiktok.com/@twice_tiktok_official",
+        "Vlive": "https://channels.vlive.tv/EDBF",
+        "Youtube": "https://www.youtube.com/channel/UCzgxx_DM2Dcb9Y1spb9mUJA"
+      },
+      "Japan": {
+        "Instagram": "https://www.instagram.com/jypetwice_japan/",
+        "Twitter": "https://twitter.com/JYPETWICE_JAPAN",
+        "TikTok": "https://www.tiktok.com/@twice_tiktok_officialjp",
+        "Youtube": "https://www.youtube.com/channel/UCCRb6nYKaT8tzLA8CwDdUtw"
+      }
+    }
+  },
+  "discography": [
+    {
+      "title": "Twicetagram",
+      "year": "2017",
+      "label": "JYP Entertainment",
+      "type": "Studio",
+      "spotify": "https://open.spotify.com/album/3hJXmK5gWN9P6jtZL0Lr2y?si=3wJyyZ4kQrmqGtHYz_6bEQ"
+    }
+  ]
+}
