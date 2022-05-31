@@ -1,12 +1,11 @@
 const express = require("express");
-const dotenv = require("dotenv");
 const connection = require("../db/connection");
 const router = require("../routes/index.routes");
 
 class Server {
   constructor() {
-    dotenv.config();
     this.app = express();
+    this.port = process.env.PORT || 3001;
     this.config();
     this.connectionDB();
     this.routes();
@@ -22,7 +21,6 @@ class Server {
   }
 
   config() {
-    this.app.set("port", process.env.PORT || 3001);
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.static("public"));
@@ -33,8 +31,8 @@ class Server {
   }
 
   start() {
-    this.app.listen(this.app.get("port"), () => {
-      console.log("Server started on port", this.app.get("port"));
+    this.app.listen(this.port, () => {
+      console.log("Server started on port", this.port);
     });
   }
 }
