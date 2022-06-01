@@ -1,7 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
-const connection = require("../db/connection");
-const router = require("../routes/index.routes");
+const connection = require("../db/connection.js");
+const router = require("../routes/index.routes.js");
 
 class Server {
   constructor() {

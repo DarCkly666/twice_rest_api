@@ -5,7 +5,7 @@ const {
   create,
   update,
   remove,
-} = require("../controllers/discograpy.controller");
+} = require("../controllers/discograpy.controller.js");
 const router = Router();
 
 router.get("/", get);

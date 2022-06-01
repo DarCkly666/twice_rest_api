@@ -1,4 +1,4 @@
-const Discography = require("../models/discography.model");
+const Discography = require("../models/Discography.model.js");
 
 const get = async (req, res) => {
   const discographies = await Discography.find();
