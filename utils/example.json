@@ -40,5 +40,26 @@
       "type": "Studio",
       "spotify": "https://open.spotify.com/album/3hJXmK5gWN9P6jtZL0Lr2y?si=3wJyyZ4kQrmqGtHYz_6bEQ"
     }
+  ],
+  "members": [
+    {
+      "birth_name": "周子瑜",
+      "real_name": "Chou Tzu-yü",
+      "artist_name": "Tzuyu",
+      "birth_date": "June 14, 1999",
+      "birth_place": "Tainan, Taiwan",
+      "height": "172cm (5ft 8 in)",
+      "weight": "48kg (106 lb)",
+      "blood_type": "A",
+      "occupation": ["Singer", "Composer"],
+      "debut": "Twice",
+      "debut_date": "2015-10-20",
+      "years_active": "2015-present",
+      "agency": "JYP Entertainment",
+      "associations": ["Twice", "JYP Nation", "SIXTEEN"],
+      "image": "tzuyu.png",
+      "color": "blue",
+      "instagram": "https://www.instagram.com/thinkaboutzu/"
+    }
   ]
 }
