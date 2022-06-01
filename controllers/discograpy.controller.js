@@ -1,14 +1,16 @@
 const Discography = require("../models/Discography.model.js");
 
 const get = async (req, res) => {
-  const discographies = await Discography.find();
+  const discographies = await Discography.find().select("-__v -_id");
   res.status(200).json(discographies);
 };
 
 const getById = async (req, res) => {
   const { id } = req.params;
   try {
-    const discography = await Discography.findById(id).exec();
+    const discography = await Discography.findById(id)
+      .select("-__v -_id")
+      .exec();
     if (!discography) {
       return res.status(404).json({
         error: true,
