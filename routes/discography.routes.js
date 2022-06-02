@@ -6,12 +6,14 @@ const {
   update,
   remove,
 } = require("../controllers/discograpy.controller.js");
+const verifySuperuser = require("../middlewares/verifySuperuser.js");
+const verifyToken = require("../middlewares/verifyToken.js");
 const router = Router();
 
 router.get("/", get);
-router.get("/:id", getById);
-router.post("/", create);
-router.put("/:id", update);
-router.delete("/:id", remove);
+router.get("/:id", [verifyToken, verifySuperuser], getById);
+router.post("/", [verifyToken, verifySuperuser], create);
+router.put("/:id", [verifyToken, verifySuperuser], update);
+router.delete("/:id", [verifyToken, verifySuperuser], remove);
 
 module.exports = router;
