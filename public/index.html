@@ -4,9 +4,100 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap"
+      rel="stylesheet"
+    />
     <title>Twice API</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-color: #22223b;
+        color: #ffb5a7;
+        font-family: "Roboto", sans-serif;
+      }
+
+      h1 {
+        position: absolute;
+        top: 10px;
+        text-align: center;
+      }
+      img {
+        position: absolute;
+        width: 50px;
+        left: 10px;
+        top: 10px;
+      }
+      hr {
+        width: 65%;
+        margin: 20px;
+      }
+      p {
+        margin-top: 10px;
+      }
+
+      a {
+        color: #f8edeb;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: blueviolet;
+      }
+      @media screen and (max-width: 400px) {
+        h1 {
+          font-size: 1.5em;
+        }
+        hr {
+          width: 90%;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1>Twice</h1>
+    <h1>Twice API REST</h1>
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/TWICE_LOGO_UNIVERSAL.png/640px-TWICE_LOGO_UNIVERSAL.png"
+      alt="logo"
+    />
+    <h2>Endpoints</h2>
+    <hr />
+    <h3>Get main info</h3>
+    <p>
+      <a href="https://twicerestapi.herokuapp.com/api/v1/data" target="_blank"
+        >https://twicerestapi.herokuapp.com/api/v1/data</a
+      >
+    </p>
+    <hr />
+    <h3>Get members info</h3>
+    <p>
+      <a href="https://twicerestapi.herokuapp.com/api/v1/member" target="_blank"
+        >https://twicerestapi.herokuapp.com/api/v1/members</a
+      >
+    </p>
+    <hr />
+    <h3>Get discography info</h3>
+    <p>
+      <a
+        href="https://twicerestapi.herokuapp.com/api/v1/discography"
+        target="_blank"
+        >https://twicerestapi.herokuapp.com/api/v1/discography</a
+      >
+    </p>
+    <hr />
   </body>
 </html>
