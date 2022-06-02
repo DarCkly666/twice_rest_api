@@ -5,7 +5,7 @@ const getData = (req, res) => {
     if (err) {
       return res.status(500).json({ error: true, message: "Data not found" });
     }
-    res.status(200).json({ error: false, data });
+    res.status(200).json(data);
   }).select("-_id -__v");
 };
 
