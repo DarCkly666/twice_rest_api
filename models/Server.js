@@ -1,5 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const cors = require("cors");
 const connection = require("../db/connection.js");
 const router = require("../routes/index.routes.js");
 
@@ -23,6 +24,7 @@ class Server {
   }
 
   config() {
+    this.app.use(cors());
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.static("public"));
